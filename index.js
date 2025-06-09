@@ -6,9 +6,13 @@ const port = process.env.PORT || 3000;
 app.use(cors({
   origin: [
     'https://fe-e7v373qzc-chiranjivi-poudels-projects.vercel.app',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://www.jdjmv.edu.np',
+    'https://jdjmv.edu.np'
   ],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
 }));
 
 app.get('/', (req, res) => {
